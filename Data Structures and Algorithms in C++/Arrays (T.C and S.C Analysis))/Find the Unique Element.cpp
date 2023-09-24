@@ -1,5 +1,7 @@
 #include<algorithm>
 #include<bits/stdc++.h>
+using namespace std;
+
 int findUnique(int *arr, int n) {
     // Write your code here
 //     int array[1000000];
