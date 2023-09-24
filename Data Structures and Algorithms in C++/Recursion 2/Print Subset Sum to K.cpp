@@ -1,3 +1,9 @@
+#include<iostream>
+#include<bits/stdc++.h>
+#include<vector>
+#include<string>
+using namespace std;
+
 void helper(int input[], int size, int output[], int idx, int k){
     
     if(size==0){
