@@ -1,4 +1,8 @@
 #include<algorithm>
+#include<bits/stdc++.h>
+
+using namespace std;
+
 void intersection(int *arr1, int *arr2, int n, int m) 
 {
     sort(arr1, arr1+n);

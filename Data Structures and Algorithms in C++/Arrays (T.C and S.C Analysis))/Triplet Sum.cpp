@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
 int pairSum(int *arr, int i, int j, int num)
 {
     int count=0;

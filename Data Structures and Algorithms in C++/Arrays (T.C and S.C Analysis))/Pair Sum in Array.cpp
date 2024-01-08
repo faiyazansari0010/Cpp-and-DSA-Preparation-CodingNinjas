@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+
 int pairSum(int *arr, int n, int num)
 {
         sort(arr,arr+n);
