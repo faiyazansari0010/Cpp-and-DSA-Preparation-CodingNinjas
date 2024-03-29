@@ -2,9 +2,10 @@
 #include <bits/stdc++.h>
 #include <vector>
 #include <string>
+#include <stack>
+
 using namespace std;
 
-#include <stack>
 int countBracketReversals(string str)
 {
   if (str.size() % 2 != 0)
