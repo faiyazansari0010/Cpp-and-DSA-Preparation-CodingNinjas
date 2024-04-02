@@ -43,7 +43,6 @@ TreeNode<int> *maxSumNode(TreeNode<int> *root)
   for (int i = 0; i < ans->children.size(); i++)
   {
     TreeNode<int> *smallAns = maxSumNode(ans->children[i]);
-    int
   }
 }
 
