@@ -18,9 +18,7 @@ class BinaryTreeNode {
     }
 };
 
-int main(){
-  
-  int height(BinaryTreeNode<int>* root) {
+int height(BinaryTreeNode<int>* root) {
     if(root == NULL){
         return 0;
     }
@@ -31,6 +29,8 @@ int main(){
     int h = max(leftHeight, rightHeight);
     return 1 + h;
 }
+
+int main(){
 
   return 0;
 }
