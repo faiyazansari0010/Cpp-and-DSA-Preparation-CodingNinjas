@@ -76,30 +76,28 @@ class Trie {
         return findWord(child, word.substr(1));
     }
     
-    void helper(vector<string> input, string pattern, string output){
-        if(root->terminal == true){
-            cout<<output<<endl;
-            return;
+    void searchPrint(TrieNode* root, string pattern, string output){
+        if(pattern.size() == 0){
+            if(root->isTerminal == true){
+                cout<<output<<endl;
+            }
+            
+            for(int i=0;i<26;i++){
+                if(root->children[i] != NULL){
+                    searchPrint(root->children[i], pattern, output + root->children[i]->data);
+                }
+            }
         }
         
-        TrieNode* child;
-        int index = word[0]-'a';
-        if(root->children[index] != NULL){
-            output = output + word[0];
-        	child =     
+        else if(root->children[pattern[0] - 'a'] != NULL){
+            searchPrint(root->children[pattern[0] - 'a'], pattern.substr(1), output+pattern[0]);
         }
     }
     
     void autoComplete(vector<string> input, string pattern) {
-        if(!findWord(root, pattern)){
-            return;
-        }
-        string output="";
-        helper(input, pattern, output);
+        for (int i = 0; i < input.size(); i++){
+            insertWord(input[i]);
+        }  
+        searchPrint(root, pattern, "");
     }
 };
-
-int main(){
-  
-  return 0;
-}
